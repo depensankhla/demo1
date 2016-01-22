@@ -1,0 +1,75 @@
+<ion-view view-title="Company Register">
+
+<!-- left menu -->
+<ion-nav-bar class="bar-calm">
+<ion-nav-back-button></ion-nav-back-button>
+</ion-nav-bar>
+<!-- left menu end-->
+
+<ion-content>
+<div class="row">
+  <div class="col">
+    <form name="ascompany" ng-submit="RegisterAsCompanyForm(Company)">
+      <div class="list">
+       
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Company Name </span>
+          <input type="text" id="cname" name="cname" ng-model="Company.companyname" required>
+          <span style="color: red;" ng-show="rquired_cname" >required</span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Email</span>
+          <input type="email" id="cemail" ng-model="Company.email">
+          <span style="color: red;" ng-show="rquired_cemail" >required</span>
+        </label>  
+        <label class="item item-input item-stacked-label"> 
+          <span class="input-label">Address</span>
+          <textarea id="caddress" ng-model="Company.address" ></textarea>
+          <span style="color: red;" ng-show="rquired_caddress" >required</span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">City</span>
+          <input type="text" id="ccity" ng-model="Company.city">
+          <span style="color: red;" ng-show="rquired_ccity" >required</span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">State</span>
+          <input type="text" id="cstate" ng-model="Company.state">
+          <span style="color: red;" ng-show="rquired_cstate" >required</span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Country</span>
+          <input type="text" id="ccountry" ng-model="Company.country">
+          <span style="color: red;" ng-show="rquired_ccountry" >required</span>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Zip</span>
+          <input type="text" id="czip" ng-model="Company.zip">
+          <span style="color: red;" ng-show="rquired_czip" >required</span>
+        </label>
+        <label class="item item-input item-stacked-label"> 
+          <span class="input-label">Company Description</span>
+          <textarea id="cdescription"  ng-model="Company.description" ></textarea>
+          <span style="color: red;" ng-show="rquired_cdescription" >required</span>
+          
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Password</span>
+          <input type="password" id="cpassword1" ng-model="Company.password">
+          <span style="color: red;" ng-show="rquired_cpassword1" >required</span>
+          
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Confirm password</span>
+          <input type="password" id="cpassword2" ng-model="Company.confirmpassword">
+          <span style="color: red;" ng-show="comfirm_password">password does not match</span>
+          
+        </label>
+      </div>
+      <button class="button button-block button-calm" ng-click="registerAscompany(Company)" type="submit">Register</button>
+
+    </form>
+  </div>
+</div>
+</ion-content>
+</ion-view>
